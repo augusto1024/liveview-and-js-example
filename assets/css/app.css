@@ -26,3 +26,7 @@ a {
 button.btn {
   @apply bg-blue-600 hover:bg-blue-700 rounded-sm p-4 font-medium;
 }
+
+button.btn:disabled {
+  @apply bg-opacity-10 bg-gray-100 border-none cursor-not-allowed border;
+}

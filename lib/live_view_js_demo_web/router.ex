@@ -19,6 +19,7 @@ defmodule LiveViewJsDemoWeb.Router do
 
     live "/", HomeLive
     live "/phx-update", PhxUpdateLive
+    live "/liveview-js", LiveViewJsLive
   end
 
   # Other scopes may use custom stacks.
