@@ -83,8 +83,6 @@ defmodule LiveViewJsDemoWeb do
     quote do
       # HTML escaping functionality
       import Phoenix.HTML
-      # Core UI components and translation
-      import LiveViewJsDemoWeb.CoreComponents
       import LiveViewJsDemoWeb.Gettext
 
       # Shortcut for generating JS commands

@@ -17,7 +17,7 @@ defmodule LiveViewJsDemoWeb.Router do
   scope "/", LiveViewJsDemoWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive
   end
 
   # Other scopes may use custom stacks.
@@ -27,7 +27,6 @@ defmodule LiveViewJsDemoWeb.Router do
 
   # Enable Swoosh mailbox preview in development
   if Application.compile_env(:live_view_js_demo, :dev_routes) do
-
     scope "/dev" do
       pipe_through :browser
 

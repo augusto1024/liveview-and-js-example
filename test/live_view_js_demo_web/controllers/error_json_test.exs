@@ -2,7 +2,9 @@ defmodule LiveViewJsDemoWeb.ErrorJSONTest do
   use LiveViewJsDemoWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert LiveViewJsDemoWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert LiveViewJsDemoWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do
