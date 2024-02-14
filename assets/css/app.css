@@ -22,3 +22,7 @@ li {
 a {
   @apply hover:text-blue-300;
 }
+
+button.btn {
+  @apply bg-blue-600 hover:bg-blue-700 rounded-sm p-4 font-medium;
+}

@@ -18,6 +18,7 @@ defmodule LiveViewJsDemoWeb.Router do
     pipe_through :browser
 
     live "/", HomeLive
+    live "/phx-update", PhxUpdateLive
   end
 
   # Other scopes may use custom stacks.
