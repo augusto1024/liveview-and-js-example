@@ -28,6 +28,20 @@ let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("
 let liveSocket = new LiveSocket('/live', Socket, {
   params: { _csrf_token: csrfToken },
   hooks,
+  dom: {
+    onBeforeElUpdated(from, to) {
+      for (const attr of from.attributes) {
+        if (attr.name.startsWith("phx-keep-")) {
+          const attrName = attr.name.substring(9)
+          if (from.hasAttribute(attrName)) {
+            to.setAttribute(attrName, from.getAttribute(attrName));
+          } else {
+            to.removeAttribute(attrName);
+          }
+        }
+      }
+    }
+  }
 })
 
 // Show progress bar on live navigation and form submits

@@ -21,6 +21,7 @@ defmodule LiveViewJsDemoWeb.Router do
     live "/phx-update", PhxUpdateLive
     live "/liveview-js", LiveViewJsLive
     live "/phx-hook", PhxHookLive
+    live "/on-before-el-updated", OnBeforeElUpdatedLive
   end
 
   # Other scopes may use custom stacks.
